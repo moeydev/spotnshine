@@ -1,12 +1,19 @@
-<!-- Template: Use for all files -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine | [Page Name]</title>
+  <title>Spot N Shine | Services</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
   <style>
     body { font-family: sans-serif; margin: 0; padding: 0; }
+
     nav {
       background: #007acc;
       padding: 1rem;
@@ -22,9 +29,13 @@
     nav a:hover {
       text-decoration: underline;
     }
+
     main {
       padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -32,50 +43,52 @@
       font-size: 0.9rem;
       margin-top: 4rem;
     }
-     .services {
-    padding: 3rem 2rem;
-    background: #f9fbfd;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.5rem;
-  }
 
-  .service {
-    background: white;
-    padding: 2.5rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    /* Modern Services Section */
+    .services {
+      padding: 3rem 2rem;
+      background: #f9fbfd;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
 
-  .service:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  }
+    .service {
+      background: white;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .service h3 {
-    color: #007acc;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
 
-  .service p {
-    color: #555;
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
+    .service h3 {
+      color: #007acc;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
 
-  .service-icon {
-    font-size: 3rem;
-    color: #007acc;
-    margin-bottom: 1rem;
-  }
+    .service p {
+      color: #555;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: #007acc;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -91,21 +104,29 @@
 
   <!-- 👇 Page-specific content -->
   <main>
-  <h1>Our Services</h1>
-
-  <h2>Home Cleaning</h2>
-  <p>Weekly, fortnightly, or one-off cleans with tailored checklists to suit your space.</p>
-
-  <h2>NDIS Support Cleaning</h2>
-  <p>Respectful, consistent, NDIS-compliant services for participants and carers.</p>
-
-  <h2>End-of-Lease Cleaning</h2>
-  <p>Bond-back guarantee. Stress-free vacate cleans for renters and landlords.</p>
-
-  <h2>Commercial & Office Cleaning</h2>
-  <p>Keep your workspace spotless, hygienic, and professional — always.</p>
-
-
+    <h1>Our Services</h1>
+    <section class="services">
+      <div class="service">
+        <i class="service-icon fa-solid fa-broom"></i>
+        <h3>Home Cleaning</h3>
+        <p>Weekly, fortnightly, or one-off cleans with tailored checklists to suit your space.</p>
+      </div>
+      <div class="service">
+        <i class="service-icon fa-solid fa-hands-helping"></i>
+        <h3>NDIS Support Cleaning</h3>
+        <p>Respectful, consistent, NDIS-compliant services for participants and carers.</p>
+      </div>
+      <div class="service">
+        <i class="service-icon fa-solid fa-house-circle-xmark"></i>
+        <h3>End-of-Lease Cleaning</h3>
+        <p>Bond-back guarantee. Stress-free vacate cleans for renters and landlords.</p>
+      </div>
+      <div class="service">
+        <i class="service-icon fa-solid fa-building"></i>
+        <h3>Commercial & Office Cleaning</h3>
+        <p>Keep your workspace spotless, hygienic, and professional — always.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
