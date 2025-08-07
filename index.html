@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine | Cleaning Services</title>
-
-  <!-- 🔹 SEO Description -->
-  <meta name="description" content="Spot N Shine offers reliable and affordable cleaning services in Sydney. Book now for spotless results." />
-
-  <!-- 🔹 Styles -->
+  <title>Spot N Shine | Home</title>
   <style>
-    /* 🔹 Base Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* ✅ Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
 
-    body {
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #fafafa;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h1, h2, h3 {
-      color: #007acc;
-    }
-
-    /* 🔹 NAVIGATION BAR */
+    /* ✅ Navigation */
     .navbar {
       background-color: #007acc;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1rem 2rem;
-      position: relative;
+      flex-wrap: wrap;
     }
 
     .nav-brand a {
       color: white;
       font-weight: bold;
       font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .nav-toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
     }
 
     .nav-links {
@@ -57,6 +41,7 @@
 
     .nav-links li a {
       color: white;
+      text-decoration: none;
       font-weight: 500;
     }
 
@@ -64,324 +49,121 @@
       text-decoration: underline;
     }
 
-    .nav-toggle {
-      display: none;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-    }
-
     @media (max-width: 768px) {
-      .nav-toggle {
-        display: block;
-      }
+      .nav-toggle { display: block; }
 
       .nav-links {
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #007acc;
         width: 100%;
+        margin-top: 1rem;
+        background-color: #007acc;
         display: none;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
 
       .nav-links li {
-        padding: 1rem;
         text-align: center;
+        padding: 1rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
       }
     }
 
-    /* 🔹 Header Animation */
-    @keyframes slideFade {
-      0% {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
+    /* ✅ Hero Section */
     .hero {
-      animation: slideFade 1s ease-out forwards;
-      background: #e0f7fa;
-      padding: 4rem 2rem;
+      background: url('https://images.unsplash.com/photo-1595475038138-8ef3874f0c9c?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 85vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 0 2rem;
     }
 
     .hero h1 {
       font-size: 3rem;
+      margin-bottom: 1rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
     }
 
-    .lead {
-      font-size: 1.25rem;
-      margin-top: 1rem;
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    /* ✅ Intro Section */
+    .intro {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #007acc;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    /* ✅ Footer */
+    footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
       color: #444;
     }
-
-    .button {
-      margin-top: 2rem;
-      display: inline-block;
-      background: #007acc;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .button:hover {
-      background: #005c99;
-    }
-
-    /* 🔹 Services */
-    .services {
-      padding: 3rem 2rem;
-      background: #f2f7fb;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .service {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .service:hover {
-      transform: translateY(-4px);
-    }
-
-    .reviews {
-      padding: 3rem 2rem;
-      background: white;
-      text-align: center;
-    }
-    .review-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.review {
-  background: #f8f9fb;
-  padding: 1.5rem;
-  border-left: 4px solid #007acc;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.review p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.review strong {
-  color: #007acc;
-  font-size: 0.95rem;
-}
-
-
-    .reviews p {
-      font-style: italic;
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    /* 🔹 Form Section */
-    .form-section {
-      padding: 4rem 2rem;
-      background: white;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      background: #f5fcff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 0.9rem 1rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    form input:focus, form textarea:focus {
-      border-color: #007acc;
-      outline: none;
-    }
-
-    form button {
-      background: #007acc;
-      color: white;
-      padding: 0.9rem 1.5rem;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    form button:hover {
-      background: #005c99;
-    }
-
-    /* 🔹 Footer */
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #f0f0f0;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* 🔹 Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .form-section, .services, .reviews {
-        padding: 2rem 1.5rem;
-      }
-
-      form {
-        padding: 2rem;
-      }
-    }
   </style>
-
-  <!-- AOS Animation CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- 🌐 Navigation -->
-  <nav class="navbar">
-    <div class="nav-brand">
-      <a href="/">Spot 'N' Shine</a>
-    </div>
-    <div class="nav-toggle" onclick="toggleNav()">☰</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/services.html">Services</a></li>
-      <li><a href="/quote.html">Get a Quote</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- ✅ Responsive Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand"><a href="/">Spot N Shine</a></div>
+      <div class="nav-toggle" onclick="toggleNav()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/quote.html">Get a Quote</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- 🧼 Hero -->
+  <!-- ✅ Hero Section -->
   <section class="hero">
-    <h1>Spot 'N' Shine</h1>
-    <p class="lead">Sydney's Trusted Cleaning Experts – Affordable, Reliable, Professional</p>
-    <a href="/quote.html" class="button" data-aos="zoom-in">Get a Free Quote</a>
+    <h1>Premium Cleaning for Sydney Homes</h1>
+    <p>From end-of-lease cleans to regular home upkeep, we deliver spotless results — every time.</p>
   </section>
 
-  <!-- ⭐ Testimonials -->
- <section class="reviews" data-aos="fade-up">
-  <h2>What Our Customers Say</h2>
-  <div class="review-list">
-
-    <div class="review">
-      <p>“Spot N Shine made our move-out cleaning effortless. We got our full bond back! Highly recommended.”</p>
-      <strong>– Sarah L., Parramatta</strong>
-    </div>
-
-    <div class="review">
-      <p>“As an NDIS participant, I appreciate the care and consistency. The team is always respectful and reliable.”</p>
-      <strong>– Michael T., Bankstown</strong>
-    </div>
-
-    <div class="review">
-      <p>“Their office cleaning has improved our workspace environment. Everything’s spotless every morning!”</p>
-      <strong>– Anita R., Sydney CBD</strong>
-    </div>
-
-    <div class="review">
-      <p>“The team arrived on time and did an amazing job after our renovation. Super friendly and efficient.”</p>
-      <strong>– Jason M., Blacktown</strong>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- 🧹 Services -->
-  <section class="services">
-    <div class="service" data-aos="fade-up" data-aos-delay="100">
-      <h3>Home Cleaning</h3>
-      <p>Regular or deep cleaning tailored to your needs. Reliable and thorough service every time.</p>
-    </div>
-    <div class="service" data-aos="fade-up" data-aos-delay="100">
-      <h3>End-of-Lease Cleaning</h3>
-      <p>Bond back guarantee. We handle everything so you can focus on your move.</p>
-    </div>
-    <div class="service" data-aos="fade-up" data-aos-delay="100">
-      <h3>NDIS Support Cleaning</h3>
-      <p>NDIS-compliant, compassionate, and respectful cleaning for participants and carers.</p>
-    </div>
-    <div class="service" data-aos="fade-up" data-aos-delay="100">
-      <h3>Office & Commercial</h3>
-      <p>Custom cleaning for businesses, tailored schedules, spotless workspaces.</p>
-    </div>
-    <div class="service" data-aos="fade-up" data-aos-delay="100">
-      <h3>After Construction Cleaning</h3>
-      <p>Cleaning plans for construction material upon completion.</p>
-    </div>
+  <!-- ✅ Intro Section -->
+  <section class="intro">
+    <h2>Why Choose Spot N Shine?</h2>
+    <p>We’re committed to providing a stress-free cleaning experience. Our local team is reliable, fully insured, and ready to make your space shine. NDIS-friendly and affordable for all households.</p>
   </section>
 
-  <!-- 📬 Booking Form -->
-  <section class="form-section" id="quote" data-aos="fade-up">
-    <h2 style="text-align:center;">Request a Quote</h2>
-    <form action="https://formsubmit.co/spotnshine25@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="address" placeholder="Service Address" required>
-      <textarea name="message" placeholder="Tell us what you need…" rows="5" required></textarea>
-      <input type="hidden" name="_next" value="https://spotnshine.org/thank-you.html">
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit">Send Request</button>
-    </form>
-  </section>
-
-  <!-- 🧾 Footer -->
+  <!-- ✅ Footer -->
   <footer>
     &copy; 2025 Spot N Shine. All rights reserved.
   </footer>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- ✅ Script for mobile nav toggle -->
   <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-
-    // 🔀 Mobile Navigation Toggle
     function toggleNav() {
       const nav = document.getElementById("navLinks");
       nav.classList.toggle("open");
