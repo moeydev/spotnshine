@@ -167,6 +167,33 @@
       background: white;
       text-align: center;
     }
+    .review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.review {
+  background: #f8f9fb;
+  padding: 1.5rem;
+  border-left: 4px solid #007acc;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.review p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.review strong {
+  color: #007acc;
+  font-size: 0.95rem;
+}
+
 
     .reviews p {
       font-style: italic;
@@ -274,10 +301,33 @@
   </section>
 
   <!-- ⭐ Testimonials -->
-  <section class="reviews" data-aos="fade-in">
-    <h2>What Our Customers Say</h2>
-    <p>"Spot N Shine made my end-of-lease move effortless. Fast, spotless, and professional. Highly recommended!"</p>
-  </section>
+ <section class="reviews" data-aos="fade-up">
+  <h2>What Our Customers Say</h2>
+  <div class="review-list">
+
+    <div class="review">
+      <p>“Spot N Shine made our move-out cleaning effortless. We got our full bond back! Highly recommended.”</p>
+      <strong>– Sarah L., Parramatta</strong>
+    </div>
+
+    <div class="review">
+      <p>“As an NDIS participant, I appreciate the care and consistency. The team is always respectful and reliable.”</p>
+      <strong>– Michael T., Bankstown</strong>
+    </div>
+
+    <div class="review">
+      <p>“Their office cleaning has improved our workspace environment. Everything’s spotless every morning!”</p>
+      <strong>– Anita R., Sydney CBD</strong>
+    </div>
+
+    <div class="review">
+      <p>“The team arrived on time and did an amazing job after our renovation. Super friendly and efficient.”</p>
+      <strong>– Jason M., Blacktown</strong>
+    </div>
+
+  </div>
+</section>
+
 
   <!-- 🧹 Services -->
   <section class="services">
