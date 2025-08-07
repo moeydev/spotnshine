@@ -1,29 +1,75 @@
-<!-- Template: Use for all files -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine | [Page Name]</title>
+  <title>Spot N Shine | Get a Quote</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; }
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9fbfd; }
     nav {
       background: #007acc;
       padding: 1rem;
       display: flex;
       justify-content: center;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      transition: background-color 0.3s ease;
+      border-radius: 4px;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #005f99;
     }
     main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
       padding: 2rem;
+    }
+    h1 {
+      color: #007acc;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    label {
+      font-weight: 600;
+      color: #333;
+    }
+    input, select, textarea {
+      padding: 0.8rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+    }
+    button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 1rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #005f99;
     }
     footer {
       text-align: center;
@@ -36,7 +82,6 @@
 </head>
 <body>
 
-  <!-- 🌐 Navigation Bar -->
   <nav>
     <a href="/">Home</a>
     <a href="/about.html">About</a>
@@ -45,32 +90,32 @@
     <a href="/contact.html">Contact</a>
   </nav>
 
-  <!-- 👇 Page-specific content -->
   <main>
-     <section class="form-section" id="quote" data-aos="fade-up">
-
-    <h2 style="text-align:center;">Request a Quote</h2>
-    
-    <!-- Replace YOUR_EMAIL@gmail.com below with your actual Gmail -->
+    <h1>Request a Quote</h1>
     <form action="https://formsubmit.co/spotnshine25@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://spotnshine.org/thank-you.html" />
+      <input type="hidden" name="_captcha" value="false" />
 
-      <!-- 👇 Input fields -->
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="text" name="address" placeholder="Service Address" required>
-      <textarea name="message" placeholder="Tell us what you need…" rows="5" required></textarea>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
 
-      <!-- 👇 Optional: Add a redirect after submission -->
-      <input type="hidden" name="_next" value="https://spotnshine.org/thank-you.html">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
 
-      <!-- 👇 Prevent spam -->
-      <input type="hidden" name="_captcha" value="false">
+      <label for="service">Service Interested In</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>Select a service</option>
+        <option>Home Cleaning</option>
+        <option>NDIS Support Cleaning</option>
+        <option>End-of-Lease Cleaning</option>
+        <option>Commercial & Office Cleaning</option>
+      </select>
 
-      <!-- 👇 Submit button -->
-      <button type="submit">Send Request</button>
+      <label for="details">Additional Details</label>
+      <textarea id="details" name="details" rows="4" placeholder="Any special requests or info"></textarea>
+
+      <button type="submit">Send Quote Request</button>
     </form>
-  </section>
   </main>
 
   <footer>
