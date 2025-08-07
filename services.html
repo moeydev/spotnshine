@@ -32,6 +32,50 @@
       font-size: 0.9rem;
       margin-top: 4rem;
     }
+     .services {
+    padding: 3rem 2rem;
+    background: #f9fbfd;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .service {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .service h3 {
+    color: #007acc;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .service p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    color: #007acc;
+    margin-bottom: 1rem;
+  }
   </style>
 </head>
 <body>
