@@ -1,29 +1,46 @@
-<!-- Template: Use for all files -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine | [Page Name]</title>
+  <title>Spot N Shine | About</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; }
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9fbfd; }
     nav {
       background: #007acc;
       padding: 1rem;
       display: flex;
       justify-content: center;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      transition: background-color 0.3s ease;
+      border-radius: 4px;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #005f99;
     }
     main {
-      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      color: #007acc;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
@@ -36,7 +53,6 @@
 </head>
 <body>
 
-  <!-- 🌐 Navigation Bar -->
   <nav>
     <a href="/">Home</a>
     <a href="/about.html">About</a>
@@ -45,18 +61,11 @@
     <a href="/contact.html">Contact</a>
   </nav>
 
-  <!-- 👇 Page-specific content -->
   <main>
-    <!-- Content goes here for each page -->
     <h1>About Spot N Shine</h1>
-  <p>Spot N Shine is a Sydney-based cleaning company dedicated to providing top-tier services to homes, offices, and NDIS participants.<br> We’re a passionate team committed to reliability, safety, and sparkle.</p>
-
-  <h2>Why Choose Us</h2>
-  <ul>
-    <li>Trusted by 1,000+ Sydney residents</li>
-    <li>Fully insured and police-checked staff</li>
-    <li>Affordable, flexible pricing</li>
-  </ul>
+    <p>At Spot N Shine, we pride ourselves on delivering high-quality, reliable cleaning services tailored to your needs. Our team is dedicated to creating clean, healthy, and comfortable environments for homes and businesses across Sydney.</p>
+    <p>With years of experience and a commitment to exceptional customer service, we go above and beyond to ensure every clean meets the highest standards.</p>
+    <p>Our mission is simple: to make your space shine, so you can focus on what matters most.</p>
   </main>
 
   <footer>
