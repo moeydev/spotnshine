@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine Cleaning Services</title>
+  <title>Spot N Shine | Cleaning Services</title>
   <style>
+    /* Global styles */
     * { box-sizing: border-box; }
-    body { font-family: 'Helvetica Neue', sans-serif; margin: 0; color: #333; }
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header section with call-to-action */
     header {
       background: #e0f7fa;
       padding: 4rem 2rem;
       text-align: center;
     }
+
     h1 {
       margin: 0;
       font-size: 2.8rem;
       color: #007acc;
     }
+
     p.lead {
       font-size: 1.2rem;
       margin-top: 1rem;
     }
-    .button {
+
+    a.button {
       display: inline-block;
       margin-top: 2rem;
       padding: 0.75rem 1.5rem;
@@ -31,16 +42,21 @@
       font-weight: bold;
       border-radius: 5px;
     }
+
+    /* Testimonials / Reviews section */
     .reviews {
       padding: 3rem 2rem;
       background: #ffffff;
       text-align: center;
     }
+
     .reviews p {
       font-style: italic;
       max-width: 600px;
       margin: auto;
     }
+
+    /* Services grid section */
     .services {
       padding: 2rem;
       background: #f9f9f9;
@@ -48,6 +64,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
+
     .service {
       background: white;
       padding: 1.5rem;
@@ -55,9 +72,46 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
     }
+
     .service h3 {
       margin-bottom: 0.5rem;
     }
+
+    /* Booking Form */
+    .form-section {
+      padding: 3rem 2rem;
+      background: #fff;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #f0f8ff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: #007acc;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
@@ -68,39 +122,19 @@
 </head>
 <body>
 
+  <!-- 🧼 Hero Section -->
   <header>
     <h1>Spot N Shine</h1>
     <p class="lead">Sydney's Trusted Cleaning Experts – Affordable, Reliable, Professional</p>
     <a href="#quote" class="button">Get a Free Quote</a>
   </header>
 
+  <!-- ⭐ Testimonials -->
   <section class="reviews">
     <h2>What Our Customers Say</h2>
     <p>"Spot N Shine made my end-of-lease move effortless. Fast, spotless, and professional. Highly recommended!"</p>
   </section>
 
+  <!-- 🧹 Services Section -->
   <section class="services">
     <div class="service">
-      <h3>Home Cleaning</h3>
-      <p>Regular or deep cleaning tailored to your needs. Reliable and thorough service every time.</p>
-    </div>
-    <div class="service">
-      <h3>End-of-Lease Cleaning</h3>
-      <p>Bond back guarantee. We handle everything so you can focus on your move.</p>
-    </div>
-    <div class="service">
-      <h3>NDIS Support Cleaning</h3>
-      <p>NDIS-compliant, compassionate, and respectful cleaning for participants and carers.</p>
-    </div>
-    <div class="service">
-      <h3>Office & Commercial</h3>
-      <p>Custom cleaning for businesses, tailored schedules, spotless workspaces.</p>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Spot N Shine. All rights reserved.
-  </footer>
-
-</body>
-</html>
