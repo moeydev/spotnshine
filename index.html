@@ -5,7 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Spot N Shine | Cleaning Services</title>
 <style>
-  /* 🔹 Base reset */
+ /* 🔹 Header Animation */
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+    background-position: center top;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    background-position: center;
+  }
+}
+
+header {
+  animation: slideFade 1s ease-out forwards;
+}
+ /* 🔹 Base reset */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -230,7 +247,7 @@
 
     <div class="service" data-aos="fade-up" data-aos-delay="100">
       <h3>After Construction Cleaning</h3>
-      <p>Cleaning plans for construction material upon completion </p>
+      <p>Cleaning plans for construction material upon completion. </p>
     </div>
       
   </section>
