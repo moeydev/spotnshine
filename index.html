@@ -4,7 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Spot N Shine | Cleaning Services</title>
-<style>
+<style><style>
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* 🔵 NAVIGATION BAR STYLES */
+.navbar {
+  background-color: #007acc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.nav-brand a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* ☰ HAMBURGER (Mobile Toggle) */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🔄 Responsive Layout */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #007acc;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+</style>
+
  /* 🔹 Header Animation */
 @keyframes slideFade {
   0% {
@@ -204,6 +278,22 @@ header {
 
 </head>
 <body>
+<!-- 🌐 Responsive Navigation -->
+<header>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <a href="/">Spot N Shine</a>
+    </div>
+    <div class="nav-toggle" onclick="toggleNav()">☰</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/quote.html">Get a Quote</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- 🧼 Hero Section -->
   <header>
