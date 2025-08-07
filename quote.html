@@ -1,0 +1,81 @@
+<!-- Template: Use for all files -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spot N Shine | [Page Name]</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    nav {
+      background: #007acc;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #eee;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navigation Bar -->
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/services.html">Services</a>
+    <a href="/quote.html">Get a Quote</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+
+  <!-- 👇 Page-specific content -->
+  <main>
+     <section class="form-section" id="quote" data-aos="fade-up">
+
+    <h2 style="text-align:center;">Request a Quote</h2>
+    
+    <!-- Replace YOUR_EMAIL@gmail.com below with your actual Gmail -->
+    <form action="https://formsubmit.co/spotnshine25@gmail.com" method="POST">
+
+      <!-- 👇 Input fields -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="address" placeholder="Service Address" required>
+      <textarea name="message" placeholder="Tell us what you need…" rows="5" required></textarea>
+
+      <!-- 👇 Optional: Add a redirect after submission -->
+      <input type="hidden" name="_next" value="https://spotnshine.org/thank-you.html">
+
+      <!-- 👇 Prevent spam -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- 👇 Submit button -->
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Spot N Shine. All rights reserved.
+  </footer>
+
+</body>
+</html>
