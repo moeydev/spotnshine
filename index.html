@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine | Home</title>
+  <title>Spot 'N' Shine | Home</title>
   <style>
-    /* Reset and Base Styles */
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
     }
 
-    /* ✅ Responsive Navigation */
+    /* 🌐 Navigation */
     nav {
       background: #007acc;
       padding: 1rem 2rem;
@@ -68,10 +67,7 @@
       }
     }
 
-    main {
-      padding: 2rem;
-    }
-
+    /* 📣 Hero Section */
     .hero {
       background-color: #f2f9ff;
       padding: 4rem 2rem;
@@ -89,23 +85,41 @@
       color: #555;
     }
 
-    .intro {
-      max-width: 800px;
-      margin: 3rem auto;
+    /* 🧹 Services Section */
+    .services {
+      padding: 3rem 2rem;
+      background: #f9fbfd;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
       text-align: center;
     }
 
-    .intro h2 {
-      color: #007acc;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
 
-    .intro p {
-      font-size: 1.1rem;
+    .service h3 {
+      color: #007acc;
+      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .service p {
+      font-size: 1rem;
       color: #444;
     }
 
+    /* 🔻 Footer */
     footer {
       text-align: center;
       padding: 2rem;
@@ -117,9 +131,9 @@
 </head>
 <body>
 
-  <!-- ✅ Navigation with Logo & Mobile Toggle -->
+  <!-- 🌐 Navigation -->
   <nav>
-    <a href="/" class="logo">Spot N Shine</a>
+    <a href="/" class="logo">Spot 'N' Shine</a>
     <div class="nav-toggle" onclick="toggleMenu()">☰</div>
     <div class="nav-links" id="navLinks">
       <a href="/">Home</a>
@@ -130,28 +144,49 @@
     </div>
   </nav>
 
-  <!-- ✅ Hero Section -->
+  <!-- 📣 Hero -->
   <section class="hero">
-    <h1>Welcome to Spot N Shine</h1>
+    <h1>Welcome to Spot 'N' Shine</h1>
     <p>Your trusted partner for professional and spotless cleaning services.</p>
   </section>
 
-  <!-- ✅ Introduction Section -->
-  <main class="intro">
-    <h2>Why Choose Us?</h2>
-    <p>Spot N Shine provides tailored cleaning solutions for homes, offices, and commercial spaces. We focus on detail, quality, and reliability. NDIS-friendly and fully insured for your peace of mind.</p>
-  </main>
+  <!-- 🧹 Our Services on Homepage -->
+  <section class="services">
+    <div class="service">
+      <h3>Home Cleaning</h3>
+      <p>Weekly, fortnightly, or one-off cleans with tailored checklists to suit your space.</p>
+    </div>
 
-  <!-- ✅ Footer -->
+    <div class="service">
+      <h3>NDIS Support Cleaning</h3>
+      <p>Respectful, consistent, NDIS-compliant services for participants and carers.</p>
+    </div>
+
+    <div class="service">
+      <h3>End-of-Lease Cleaning</h3>
+      <p>Bond-back guarantee. Stress-free vacate cleans for renters and landlords.</p>
+    </div>
+
+    <div class="service">
+      <h3>Commercial & Office Cleaning</h3>
+      <p>Keep your workspace spotless, hygienic, and professional — always.</p>
+    </div>
+
+    <div class="service">
+      <h3>After Construction Cleanup</h3>
+      <p>Spot 'N' Shine ensures a flawless finish with expert cleaning for all your projects.</p>
+    </div>
+  </section>
+
+  <!-- 🔻 Footer -->
   <footer>
-    &copy; 2025 Spot N Shine. All rights reserved.
+    &copy; 2025 Spot 'N' Shine. All rights reserved.
   </footer>
 
-  <!-- ✅ Mobile Navigation Script -->
+  <!-- 📱 Mobile Nav Script -->
   <script>
     function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("active");
+      document.getElementById("navLinks").classList.toggle("active");
     }
   </script>
 
