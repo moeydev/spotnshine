@@ -1,19 +1,13 @@
+<!-- services.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spot N Shine | Services</title>
-
-  <!-- Font Awesome CDN for icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-
+  <title>Our Services | Spot 'N' Shine</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVj8dxjWQ/0TmHh6hR7N4hHlZfhQ1cBkBVmAW/OkPbU71cCqALAxY3JjHoVjCMEqJ3YXEFxRLVYjTk3gPj3kEA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body { font-family: sans-serif; margin: 0; padding: 0; }
-
     nav {
       background: #007acc;
       padding: 1rem;
@@ -29,13 +23,9 @@
     nav a:hover {
       text-decoration: underline;
     }
-
     main {
       padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
     }
-
     footer {
       text-align: center;
       padding: 2rem;
@@ -43,8 +33,6 @@
       font-size: 0.9rem;
       margin-top: 4rem;
     }
-
-    /* Modern Services Section */
     .services {
       padding: 3rem 2rem;
       background: #f9fbfd;
@@ -52,7 +40,6 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2.5rem;
     }
-
     .service {
       background: white;
       padding: 2.5rem 2rem;
@@ -65,25 +52,21 @@
       flex-direction: column;
       align-items: center;
     }
-
     .service:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
     }
-
     .service h3 {
       color: #007acc;
       font-weight: 700;
       font-size: 1.5rem;
       margin-bottom: 1rem;
     }
-
     .service p {
       color: #555;
       font-size: 1.1rem;
       line-height: 1.5;
     }
-
     .service-icon {
       font-size: 3rem;
       color: #007acc;
@@ -92,7 +75,6 @@
   </style>
 </head>
 <body>
-
   <!-- 🌐 Navigation Bar -->
   <nav>
     <a href="/">Home</a>
@@ -102,36 +84,39 @@
     <a href="/contact.html">Contact</a>
   </nav>
 
-  <!-- 👇 Page-specific content -->
   <main>
-    <h1>Our Services</h1>
+    <h1 style="text-align: center; color: #007acc;">Our Services</h1>
     <section class="services">
       <div class="service">
-        <i class="service-icon fa-solid fa-broom"></i>
+        <div class="service-icon"><i class="fas fa-home"></i></div>
         <h3>Home Cleaning</h3>
         <p>Weekly, fortnightly, or one-off cleans with tailored checklists to suit your space.</p>
       </div>
       <div class="service">
-        <i class="service-icon fa-solid fa-hands-helping"></i>
+        <div class="service-icon"><i class="fas fa-wheelchair"></i></div>
         <h3>NDIS Support Cleaning</h3>
         <p>Respectful, consistent, NDIS-compliant services for participants and carers.</p>
       </div>
       <div class="service">
-        <i class="service-icon fa-solid fa-house-circle-xmark"></i>
+        <div class="service-icon"><i class="fas fa-key"></i></div>
         <h3>End-of-Lease Cleaning</h3>
         <p>Bond-back guarantee. Stress-free vacate cleans for renters and landlords.</p>
       </div>
       <div class="service">
-        <i class="service-icon fa-solid fa-building"></i>
+        <div class="service-icon"><i class="fas fa-building"></i></div>
         <h3>Commercial & Office Cleaning</h3>
         <p>Keep your workspace spotless, hygienic, and professional — always.</p>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+        <h3>After Construction Cleanup</h3>
+        <p>Spot 'N' Shine ensures a flawless finish with expert cleaning for all your projects.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2025 Spot N Shine. All rights reserved.
+    &copy; 2025 Spot 'N' Shine. All rights reserved.
   </footer>
-
 </body>
 </html>
